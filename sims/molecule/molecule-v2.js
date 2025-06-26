@@ -710,6 +710,5 @@ const MoleculeStudio = () => {
     );
 };
 
-// Render the component using React 18 createRoot API
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(React.createElement(MoleculeStudio));
+// Render the component
+ReactDOM.render(React.createElement(MoleculeStudio), document.getElementById('root'));
