@@ -348,6 +348,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Molecule Viewer
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -359,6 +372,85 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developer Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#console-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Console Errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Fixed Issues:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-remaining-warnings-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      ℹ️ Remaining Warnings Explained:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-production-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 For Production Use:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -524,6 +616,74 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developer Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#console-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Console Errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Fixed Issues:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-remaining-warnings-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      ℹ️ Remaining Warnings Explained:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-production-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 For Production Use:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -547,7 +707,37 @@
 
 
 <h1 id="molecule-viewer">Molecule Viewer</h1>
-<p><a href="main.html">Molecule Viewer</a></p>
+<p>This is a 700+ JavaScript program written in React with the three.js library
+for doing 3D rendering of molecules.  We only have a small list for demos.</p>
+<p><a href="main.html">Run the Molecule Viewer</a></p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Refactor to put molecules into individual JSON files.  Only load one
+molecule at a time.</p>
+<h2 id="developer-notes">Developer Notes</h2>
+<h3 id="console-errors">Console Errors</h3>
+<p>Those are mostly development warnings, but let me fix the React 18 warning by updating the code to use the new <code>createRoot</code> API instead of the deprecated <code>ReactDOM.render</code>.Perfect! I've updated the code to fix the React 18 warning. Now save the updated <code>molecule.js</code> file and refresh your page.</p>
+<h2 id="fixed-issues">✅ <strong>Fixed Issues:</strong></h2>
+<ul>
+<li><strong>ReactDOM.render warning</strong> - Now uses the modern <code>createRoot</code> API</li>
+</ul>
+<h2 id="i-remaining-warnings-explained">ℹ️ <strong>Remaining Warnings Explained:</strong></h2>
+<p>The other console messages are normal for development and don't affect functionality:</p>
+<ol>
+<li><strong>"Download React DevTools"</strong> - Just a helpful suggestion for developers</li>
+<li><strong>"cdn.tailwindcss.com should not be used in production"</strong> - Normal warning when using Tailwind via CDN (fine for development)</li>
+<li><strong>"You are using the in-browser Babel transformer"</strong> - Expected when transpiling JSX in the browser (fine for development)</li>
+<li><strong>"Enabled live reload"</strong> - Some development feature that's running</li>
+<li><strong>"readystatechange handler took 156ms"</strong> - Performance notice from Babel transpiling (normal for development)</li>
+</ol>
+<h2 id="for-production-use">🚀 <strong>For Production Use:</strong></h2>
+<p>If you wanted to eliminate all warnings for a production app, you'd need to:</p>
+<ul>
+<li>Install Tailwind CSS properly via PostCSS</li>
+<li>Pre-compile your JSX using a build tool like Webpack/Vite</li>
+<li>Use React production builds</li>
+<li>Set up a proper development server</li>
+</ul>
+<p>But for development and testing, these warnings are completely normal and the app works perfectly! Your 3D molecular visualizer should now run without any React warnings.</p>
 
 
 
