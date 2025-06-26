@@ -5,6 +5,10 @@ for doing 3D rendering of molecules.  We only have a small list for demos.
 
 [Run the Molecule Viewer](main.html)
 
+## Anthropic Claude Dialog
+
+[Link to Full Log](https://claude.ai/public/artifacts/bd0d1da9-88cb-4f81-a670-c714f5bdfa28)
+
 ## Next Steps
 
 Refactor to put molecules into individual JSON files.  Only load one
