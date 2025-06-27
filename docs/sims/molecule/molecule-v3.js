@@ -191,23 +191,19 @@ const MoleculeStudio = () => {
     ];
 
     const initializeScene = () => {
-        // Get container dimensions with fallback
-        const width = mountRef.current?.clientWidth || 800;
-        const height = mountRef.current?.clientHeight || 600;
-        
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0xf8f9fa);
         
         const camera = new THREE.PerspectiveCamera(
             75,
-            width / height,
+            mountRef.current.clientWidth / mountRef.current.clientHeight,
             0.1,
             1000
         );
         camera.position.set(0, 0, 10);
         
         const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(width, height);
+        renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         
@@ -278,9 +274,6 @@ const MoleculeStudio = () => {
             renderer.render(scene, camera);
         };
         animate();
-        
-        // Force initial render
-        renderer.render(scene, camera);
     };
 
     const clearScene = () => {
@@ -301,11 +294,7 @@ const MoleculeStudio = () => {
     };
 
     const renderMolecule = (data) => {
-        if (!sceneRef.current || !rendererRef.current || !cameraRef.current) {
-            console.warn('Scene not yet initialized, retrying...');
-            setTimeout(() => renderMolecule(data), 100);
-            return;
-        }
+        if (!sceneRef.current) return;
         
         clearScene();
         
@@ -550,13 +539,9 @@ const MoleculeStudio = () => {
     };
 
     useEffect(() => {
-        // Delay initialization to ensure container is properly sized
-        const initTimeout = setTimeout(() => {
-            initializeScene();
-        }, 100);
+        initializeScene();
         
         return () => {
-            clearTimeout(initTimeout);
             if (frameId.current) {
                 cancelAnimationFrame(frameId.current);
             }
